@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <script>
+      var musik, background1, background2, background3, background4, background5, background6, ucapan1, ucapan2, ucapan3, ucapan4, ucapan5, ucapan6, kado1, kado2, kado3, kado4, tag;
+    </script>
+    <link rel="stylesheet" href="ss.css" />
+    <title>Spesial Buat Kamu</title>
+  </head>
+  <body>
+    <div class="preload"><p>Loading dulu . . .</p></div>
+    <div class="open">
+      <div class="ilop">
+        <div class="lope" onclick="ilang()"><i class="love material-icons-sharp"> favorite </i></div>
+        <h3>Klik Love nya</h3>
+      </div>
+    </div>
+    <div class="bg">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="bg-love"></div>
+    <div class="content adascroll contentslide1">
+      <div class="slidekuy1">
+        <p id="typetxt" class="typetxt1"></p>
+        <button id="lanjut" class="lanjut1" onclick="tampilContent2()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+    <div class="content2 contentslide2">
+      <div class="txtPilihHadiah">
+        <p style="max-width: 70vw" class="typetxt2"></p>
+      </div>
+      <div class="hadiahku">
+        <div class="row">
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+        </div>
+        <div class="row">
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+          <img src="https://ini.dariku.my.id/buat-istriku-tercinta/kado.png" class="kado" />
+        </div>
+      </div>
+    </div>
+
+    <div class="content adascroll contentslide4">
+      <div class="slidekuy2">
+        <p id="typetxt" class="typetxt4"></p>
+        <button id="lanjut" class="lanjut4" onclick="tampilContent5()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content contentadascroll contentslide5">
+      <div class="slidekuy">
+        <p id="typetxt" class="typetxt5"></p>
+        <button id="lanjut" class="lanjut5" onclick="tampilContent6()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content adascroll contentslide6">
+      <div class="slidekuy3">
+        <p id="typetxt" class="typetxt6"></p>
+        <button id="lanjut" class="lanjut6" onclick="tampilContent3()">Klik untuk Lanjut ya!</button>
+      </div>
+    </div>
+
+    <div class="content2 contentslide3">
+      <div class="txtPilihHadiah">
+        <p class="typetxt3"></p>
+      </div>
+      <div class="formwish">
+        <textarea name="" id="valuewish" rows="7"></textarea>
+      </div>
+      <button class="kirimwish" onclick="sendwish()">Kirim</button>
+    </div>
+
+    <div class="wm">
+      <p></p>
+    </div>
+
+    <script>
+      // ========================
+
+      // Musik
+      musik = "https://dekatutorial.github.io/musik/Until%20I%20Found%20You%20-%20Piano.mp3";
+
+      // Daftar Foto
+      background1 = "https://dekatutorial.github.io/v/pryntydha/1.jpg";
+      background2 = "https://dekatutorial.github.io/v/pryntydha/2.jpg";
+      background3 = "https://dekatutorial.github.io/v/pryntydha/3.jpg";
+      background4 = "https://dekatutorial.github.io/v/pryntydha/4.jpg";
+      background5 = "https://dekatutorial.github.io/v/pryntydha/5.jpg";
+      background6 = "https://dekatutorial.github.io/v/pryntydha/6.jpg";
+
+      // Ucapan Slide 1
+      ucapan1 = `Selamat Ulang Tahun, Sayong.##Semoga aku berhasil jadi orang pertama yang ucapin itu, yang terpenting aku masih nemuin ulang tahun kali ini sama kamu.##`;
+
+      // Ucapan Slide 2 / Pilihan Kado
+      // nonton bioskop, makan richeese 1 ekor, coffe time, bowling time
+      ucapan2 = "Kamu pilih kado yang mana";
+      kado1 = "Yeayy kamu dapet kue ultah";
+      kado2 = "Yeayy kamu dapet es krim";
+      kado3 = "Yeayy kamu dapet cinta tulusku";
+      kado4 = "Yeayy kamu dapet kasih sayangku";
+
+      // Ucapan Slide 3
+      ucapan3 = `Semoga di umur kamu sekarang semesta lebih berpihak, semoga bisa mendapatkan hal yang selama ini di perjuangkan. Semoga senantiasa diberi kebahagiaan.##I love you on your birthday, and everyday, now and forever.##`;
+
+      // Ucapan Slide 4
+      ucapan4 = `Aku mau ucapain banyak" terimakasih buat selama ini, terimakasih udah jalan sejauh ini, terimakasih udah nerima kurang lebihnya aku, terimakasih atas sabarmu, terimakasih buat semua yang kamu kasih ke aku, yang aku gabisa bales satu per satu, makasih atas effort, perhatian, apapun itu dalam bentuk apapun itu, aku ucapain terimakasih banyak##Aku minta maaf aku bukan cowo yang bisa ngerti kamu, ngga paham sama pikiran kamu#Maaf buat perilaku yang nyakitin kamu, maaf selalu ngerepotin kamu, im so lucky have you#Jangan bosen sama aku, jangan jauh sama aku, tetep sama aku, aku udah cukup berantakan apalagi kalo ga sama kamu.##`;
+      // Ucapan Slide 5
+      ucapan5 = `Mari rayakan ulang tahunmu bersama setiap tahun, selama sisa hidup kita##I love you so much babe##`;
+
+      // Ucapan Slide 6
+      ucapan6 = "Isi wish kamu disini ya";
+
+      // Watermark
+      tag = "";
+
+      var kadokuyy = "";
+
+      // ========================
+      // Edit bagian teks saja
+      async function sendwish() {
+        pesanku = valuewish.value;
+        if (pesanku) {
+          await swalo.fire({ confirmButtonText: "OK", title: "Kirim ke wa aku ya" });
+          //     location.assign(
+          //       "https://wa.me/?text=" +
+          //         `
+          // Kado : ${kadokuyy}%0A
+          // Pesan : ${pesanku}`
+          //     );
+          location.assign("https://wa.me/?text=" + `${pesanku}`);
+        } else {
+          await swalo.fire({ confirmButtonText: "OK", title: "Jangan dikosongin ya" });
+        }
+      }
+
+      async function dapethadiah(teks) {
+        kadokuyy = teks;
+        await swalo.fire({ title: `${teks}`, confirmButtonText: "OK" });
+        await swalo.fire({ title: "Lanjut gak nihh", confirmButtonText: "Lanjuttt" });
+        tampilContent4();
+      }
+    </script>
+    <script src="scriptss.js"></script>
+  </body>
+</html>
