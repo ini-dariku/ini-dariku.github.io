@@ -77,7 +77,7 @@ async function start() {
     }
     if (e.isDenied) {
       klik.play();
-      await swalo.fire({ title: "Aww! I'll give you a hug.\nCheer up !", imageUrl: "https://dekatutorial.github.io/v/peluk.gif" });
+      await swalo.fire({ title: "Aww! I'll give you a hug.\nCheer up !", imageUrl: "https://dekatutorial.github.io/v/mylove/peluk.gif" });
       klik.play();
       await swalo.fire({ title: "Are you feeling better?", showDenyButton: 1, confirmButtonText: "Ok", denyButtonText: "Cancel", reverseButtons: true }).then(async (e) => {
         if (e.isConfirmed) {
@@ -86,7 +86,7 @@ async function start() {
         }
         if (e.isDenied) {
           klik.play();
-          await swalo.fire({ title: "Aww! I'll give you a hug.\nCheer up !", imageUrl: "https://dekatutorial.github.io/v/peluk.gif" });
+          await swalo.fire({ title: "Aww! I'll give you a hug.\nCheer up !", imageUrl: "https://dekatutorial.github.io/v/mylove/peluk.gif" });
         }
       });
     }
